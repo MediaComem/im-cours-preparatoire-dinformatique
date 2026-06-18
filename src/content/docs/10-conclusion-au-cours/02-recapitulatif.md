@@ -1,4 +1,3 @@
 ---
 title: Récapitulatif
-description: TODO
 ---

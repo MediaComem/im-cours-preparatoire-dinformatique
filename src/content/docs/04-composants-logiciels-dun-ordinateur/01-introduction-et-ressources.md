@@ -1,0 +1,5 @@
+---
+title: Composants logiciels d'un ordinateur - Introduction et ressources
+sidebar:
+  label: Introduction et ressources
+---

@@ -1,0 +1,5 @@
+---
+title: Composants matériels d'un ordinateur - Introduction et ressources
+sidebar:
+  label: Introduction et ressources
+---

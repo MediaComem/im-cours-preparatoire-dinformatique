@@ -36,12 +36,12 @@ export default defineConfig({
 				},
 				{
 					label: "Premiers pas",
-					collapsed: true,
+					collapsed: false,
 					items: [{ autogenerate: { directory: "02-premiers-pas" } }],
 				},
 				{
-					label: "Composants matériel d'un ordinateur",
-					collapsed: true,
+					label: "Composants matériels d'un ordinateur",
+					collapsed: false,
 					items: [
 						{
 							autogenerate: {
@@ -51,8 +51,8 @@ export default defineConfig({
 					],
 				},
 				{
-					label: "Composants logiciel d'un ordinateur",
-					collapsed: true,
+					label: "Composants logiciels d'un ordinateur",
+					collapsed: false,
 					items: [
 						{
 							autogenerate: {
@@ -63,7 +63,7 @@ export default defineConfig({
 				},
 				{
 					label: "Composants d'un système d'exploitation",
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							autogenerate: {
@@ -74,7 +74,7 @@ export default defineConfig({
 				},
 				{
 					label: "Configurer son système d'exploitation",
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							autogenerate: {
@@ -85,7 +85,7 @@ export default defineConfig({
 				},
 				{
 					label: "Installer et configurer ses applications",
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							autogenerate: {
@@ -96,7 +96,7 @@ export default defineConfig({
 				},
 				{
 					label: "Sauvegarder et restaurer ses données",
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							autogenerate: {
@@ -106,12 +106,12 @@ export default defineConfig({
 					],
 				},
 				{
-					label: "Prise de notes avec Markdown",
-					collapsed: true,
+					label: "Prise de notes Markdown",
+					collapsed: false,
 					items: [
 						{
 							autogenerate: {
-								directory: "09-prise-de-notes-avec-markdown",
+								directory: "09-prise-de-notes-markdown",
 							},
 						},
 					],

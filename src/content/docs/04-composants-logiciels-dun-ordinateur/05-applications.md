@@ -1,4 +1,3 @@
 ---
 title: Applications
-description: TODO
 ---

@@ -1,4 +1,3 @@
 ---
 title: Conclusion
-description: TODO
 ---

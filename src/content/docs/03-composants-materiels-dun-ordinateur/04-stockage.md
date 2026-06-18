@@ -1,4 +1,3 @@
 ---
 title: Stockage
-description: TODO
 ---

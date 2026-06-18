@@ -1,4 +1,3 @@
 ---
 title: Bienvenue
-description: TODO
 ---
