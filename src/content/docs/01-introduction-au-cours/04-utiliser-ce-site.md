@@ -1,3 +1,0 @@
----
-title: Utiliser ce site
----

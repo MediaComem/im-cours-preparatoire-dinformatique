@@ -1,7 +1,0 @@
----
-title: Safari
-sidebar:
-  badge:
-    text: macOS
-    variant: note
----

@@ -1,3 +1,0 @@
----
-title: Mémoire vive (RAM)
----

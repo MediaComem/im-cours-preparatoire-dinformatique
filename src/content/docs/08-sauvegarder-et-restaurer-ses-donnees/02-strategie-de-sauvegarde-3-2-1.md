@@ -1,5 +1,0 @@
----
-title: Stratégie de sauvegarde 3-2-1
----
-
-Home directory
