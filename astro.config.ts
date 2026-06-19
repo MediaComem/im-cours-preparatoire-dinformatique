@@ -2,19 +2,22 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 
+const title = "UPInfoIM";
+const description =
+	"Unité préparatoire d'informatique pour ingénierie des médias à la HEIG-VD.";
 const site = "https://ludelafo.github.io";
-const ogUrl = new URL("test-astro/og.webp?v=1", site).href;
-const ogImageAlt = "Make your docs shine with Starlight";
+const base = "/test-astro";
+const ogUrl = new URL(`${base}/og.webp?v=1`, site).href;
+const ogImageAlt = `${title} - ${description}`;
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://ludelafo.github.io",
-	base: "/test-astro",
+	site,
+	base,
 	integrations: [
 		starlight({
-			title: "UPInfoIM",
-			description:
-				"Unité préparatoire d'informatique pour ingénierie des médias à la HEIG-VD",
+			title,
+			description,
 			logo: {
 				src: "./src/assets/logo.svg",
 				replacesTitle: false,
@@ -27,6 +30,14 @@ export default defineConfig({
 				},
 			],
 			head: [
+				{
+					tag: "script",
+					attrs: {
+						src: "https://cloud.umami.is/script.js",
+						"data-site": "20c47a80-8802-463c-99a5-fe881bde77b9",
+						defer: true,
+					},
+				},
 				{
 					tag: "meta",
 					attrs: { property: "og:image", content: ogUrl },

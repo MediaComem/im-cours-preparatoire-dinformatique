@@ -4,7 +4,18 @@ pagefind: false
 description: Page de démonstration.
 ---
 
-import { Card, CardGrid, LinkButton } from "@astrojs/starlight/components";
+import {
+	Aside,
+	Card,
+	CardGrid,
+	FileTree,
+	LinkButton,
+	LinkCard,
+	Steps,
+	TabItem,
+	Tabs,
+} from "@astrojs/starlight/components";
+import FeedbackComponent from "@components/FeedbackComponent.astro";
 
 ```bash title="Installing dependencies…"
 npm install
@@ -18,3 +29,78 @@ console.log("Hello World!");
 ```java
 System.out.println("Hello World!");
 ```
+
+<Card title="Stars" icon="star">
+	Sirius, Vega, Betelgeuse
+</Card>
+
+<LinkCard
+	title="Internationalization"
+	href="#"
+	description="Configure Starlight to support multiple languages."
+/>
+
+<CardGrid>
+	<Card title="Check this out" icon="open-book">
+		Interesting content you want to highlight.
+	</Card>
+	<Card title="Other feature" icon="information">
+		More information you want to share.
+	</Card>
+</CardGrid>
+
+<Aside type="tip">
+
+Other content is also supported in asides.
+
+```js
+// A code snippet, for example.
+```
+
+</Aside>
+
+<FileTree>
+
+- src
+  - components
+    - Header.astro an **important** file
+    - **Title.astro**
+  - ...
+
+</FileTree>
+
+<Steps>
+
+1. Import the component into your MDX file:
+
+   ```js
+   import { Steps } from "@astrojs/starlight/components";
+   ```
+
+2. Wrap `<Steps>` around your ordered list items.
+
+</Steps>
+
+_Some stars:_
+
+<Tabs syncKey="constellations">
+	<TabItem label="Orion" icon="star">
+		Bellatrix, Rigel, Betelgeuse
+	</TabItem>
+	<TabItem label="Gemini" icon="moon">
+		Pollux, Castor A, Castor B
+	</TabItem>
+</Tabs>
+
+_Some exoplanets:_
+
+<Tabs syncKey="constellations">
+	<TabItem label="Orion" icon="star">
+		HD 34445 b, Gliese 179 b, Wasp-82 b
+	</TabItem>
+	<TabItem label="Gemini" icon="moon">
+		Pollux b, HAT-P-24b, HD 50554 b
+	</TabItem>
+</Tabs>
+
+<FeedbackComponent />
