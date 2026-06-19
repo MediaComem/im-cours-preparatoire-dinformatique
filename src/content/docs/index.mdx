@@ -3,7 +3,7 @@ title: Accueil
 description:
   Page d'accueil à l'unité préparatoire d'informatique pour l'ingénierie des
   médias à la HEIG-VD.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+template: splash
 hero:
   tagline:
     Bienvenue sur la page d'accueil de l'unité préparatoire d'informatique pour
@@ -14,21 +14,20 @@ hero:
     - text: Commencer ici
       link: /test-astro/01-introduction-au-cours/01-bienvenue
       icon: right-arrow
-    - text: Site de la HEIG-VD
-      link: https://heig-vd.ch
-      icon: external
+    - text: Évaluer si je devrais suivre ce cours
+      link: /test-astro/01-introduction-au-cours/04-evaluer-si-je-devrais-suivre-ce-cours
+      icon: right-arrow
       variant: minimal
 banner:
   content: |
-    We just launched something cool!
-    <a href="https://example.com">Check it out</a>
+    Les inscriptions pour l'année académique 2026-2027 sont ouvertes ! Consultez la page <a href="/test-astro/01-introduction-au-cours/06-sinscrire">S'inscrire</a> pour plus d'informations.
 ---
 
 import { Card, CardGrid, LinkButton } from "@astrojs/starlight/components";
 
-## Buts du cours
+## Aperçu du cours
 
-Un aperçu des objectifs du cours et de ce que vous allez apprendre.
+Un aperçu du cours et de ce que vous allez apprendre.
 
 <CardGrid>
 	<Card

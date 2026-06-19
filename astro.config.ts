@@ -2,6 +2,10 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 
+const site = "https://ludelafo.github.io";
+const ogUrl = new URL("test-astro/og.webp?v=1", site).href;
+const ogImageAlt = "Make your docs shine with Starlight";
+
 // https://astro.build/config
 export default defineConfig({
 	site: "https://ludelafo.github.io",
@@ -10,13 +14,7 @@ export default defineConfig({
 		starlight({
 			title: "UPInfoIM",
 			description:
-				"Unité préparatoire d'informatique pour l'ingénierie des médias à la HEIG-VD",
-			locales: {
-				root: {
-					label: "Français",
-					lang: "fr",
-				},
-			},
+				"Unité préparatoire d'informatique pour ingénierie des médias à la HEIG-VD",
 			logo: {
 				src: "./src/assets/logo.svg",
 				replacesTitle: false,
@@ -28,9 +26,26 @@ export default defineConfig({
 					href: "https://github.com/ludelafo/test-astro",
 				},
 			],
+			head: [
+				{
+					tag: "meta",
+					attrs: { property: "og:image", content: ogUrl },
+				},
+				{
+					tag: "meta",
+					attrs: { property: "og:image:alt", content: ogImageAlt },
+				},
+			],
+			defaultLocale: "root",
+			locales: {
+				root: {
+					label: "Français",
+					lang: "fr",
+				},
+			},
 			credits: true,
 			editLink: {
-				baseUrl: "https://github.com/ludelafo/test-astro/edit/main/docs/",
+				baseUrl: "https://github.com/ludelafo/test-astro/edit/main/",
 			},
 			lastUpdated: true,
 			tableOfContents: {
