@@ -8,6 +8,8 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: "UPInfoIM",
+			description:
+				"Unité préparatoire d'informatique pour l'ingénierie des médias à la HEIG-VD",
 			locales: {
 				root: {
 					label: "Français",
@@ -25,6 +27,11 @@ export default defineConfig({
 					href: "https://github.com/ludelafo/test-astro",
 				},
 			],
+			credits: true,
+			editLink: {
+				baseUrl: "https://github.com/ludelafo/test-astro/edit/main/docs/",
+			},
+			lastUpdated: true,
 			tableOfContents: {
 				minHeadingLevel: 2,
 				maxHeadingLevel: 3,
@@ -35,9 +42,11 @@ export default defineConfig({
 					items: [{ autogenerate: { directory: "01-introduction-au-cours" } }],
 				},
 				{
-					label: "Premiers pas",
+					label: "Premiers pas à la HEIG-VD",
 					collapsed: false,
-					items: [{ autogenerate: { directory: "02-premiers-pas" } }],
+					items: [
+						{ autogenerate: { directory: "02-premiers-pas-a-la-heig-vd" } },
+					],
 				},
 				{
 					label: "Composants matériels d'un ordinateur",
