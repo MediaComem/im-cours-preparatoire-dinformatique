@@ -34,7 +34,7 @@ export default defineConfig({
 					tag: "script",
 					attrs: {
 						src: "https://cloud.umami.is/script.js",
-						"data-site": "20c47a80-8802-463c-99a5-fe881bde77b9",
+						"data-website-id": "20c47a80-8802-463c-99a5-fe881bde77b9",
 						defer: true,
 					},
 				},
