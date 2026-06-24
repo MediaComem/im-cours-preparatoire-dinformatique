@@ -1,0 +1,71 @@
+---
+export interface Props {
+	readonly?: boolean;
+}
+
+const { readonly = false } = Astro.props;
+---
+
+<div data-checklist={readonly ? "readonly" : "interactive"}>
+	<slot />
+</div>
+
+<style>
+	[data-checklist] {
+		padding-top: 0.5rem;
+	}
+
+	[data-checklist] :global(ul) {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	[data-checklist] :global(li) {
+		margin: 0.5rem 0;
+		display: flex;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+
+	[data-checklist] :global(input[type="checkbox"]) {
+		width: 1.125rem;
+		height: 1.125rem;
+		cursor: pointer;
+		flex-shrink: 0;
+		margin-top: 0.125rem;
+	}
+</style>
+
+<script>
+	document
+		.querySelectorAll("[data-checklist='interactive']")
+		.forEach((list, listIndex) => {
+			const key = `checklist-${location.pathname}-${listIndex}`;
+			const boxes = list.querySelectorAll<HTMLInputElement>(
+				"input[type=checkbox]",
+			);
+
+			boxes.forEach((checkbox) => checkbox.removeAttribute("disabled"));
+
+			const saved: Record<number, boolean> = JSON.parse(
+				localStorage.getItem(key) ?? "{}",
+			);
+
+			boxes.forEach((checkbox, index) => {
+				if (saved[index] != null) {
+					checkbox.checked = saved[index];
+				}
+			});
+
+			boxes.forEach((checkbox) =>
+				checkbox.addEventListener("change", () => {
+					const state: Record<number, boolean> = {};
+
+					boxes.forEach((b, j) => (state[j] = b.checked));
+
+					localStorage.setItem(key, JSON.stringify(state));
+				}),
+			);
+		});
+</script>

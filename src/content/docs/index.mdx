@@ -3,16 +3,16 @@ title: Accueil
 template: splash
 hero:
   tagline:
-    Bienvenue sur la page d'accueil du cours préparatoire d'informatique pour
+    Bienvenue sur la page d'accueil de l'unité préparatoire d'informatique pour
     ingénierie des médias à la HEIG-VD !
   image:
     file: ../../assets/houston.webp
   actions:
     - text: Commencer ici
-      link: /im-cours-preparatoire-dinformatique/01-introduction-au-cours/01-bienvenue
+      link: /heig-vd-upinfo-course/01-introduction-au-cours/01-bienvenue
       icon: right-arrow
     - text: Évaluer si je devrais suivre ce cours
-      link: /im-cours-preparatoire-dinformatique/01-introduction-au-cours/05-evaluer-si-je-devrais-suivre-ce-cours
+      link: /heig-vd-upinfo-course/01-introduction-au-cours/05-evaluer-si-je-devrais-suivre-ce-cours
       icon: right-arrow
       variant: minimal
 banner:
@@ -27,25 +27,30 @@ import { Card, CardGrid, LinkButton } from "@astrojs/starlight/components";
 Un aperçu du cours et de ce que vous allez apprendre.
 
 <CardGrid>
+	<Card title="Comprendre les bases de l'informatique" icon="desktop">
+		Comprendre les bases de l'informatique pour ses études à la HEIG-VD.
+	</Card>
 	<Card
-		title="Comprendre et utiliser efficacement votre ordinateur"
-		icon="desktop"
+		title="Configurer et utiliser un système
+  d'exploitation"
+		icon="setting"
 	>
-		Comprendre et configurer votre ordinateur pour être efficace dans vos études
+		Configurer et utiliser un système d'exploitation pour un environnement de
+		travail efficace.
+	</Card>
+	<Card title="Installer et configurer des applications" icon="window">
+		Installer et configurer les applications de base nécessaires pour vos études
 		à la HEIG-VD.
 	</Card>
-	<Card
-		title="Installer les logiciels de base liés à la formation"
-		icon="window"
-	>
-		Installer et configurer les logiciels de base nécessaires pour vos études à
-		la HEIG-VD.
+	<Card title="Sauvegarder et restaurer ses données" icon="database">
+		Apprendre à sauvegarder et restaurer ses données pour ne jamais perdre son
+		travail.
 	</Card>
-	<Card
-		title="Une ressource qui peut vous être utile en toute circonstance"
-		icon="rocket"
-	>
-		Aider dans la configuration de votre ordinateur et avoir un environnement de
-		travail professionnel.
+	<Card title="Prendre des notes avec Markdown" icon="notes">
+		Prendre des notes et documenter son travail avec Markdown.
+	</Card>
+	<Card title="Une ressource utile en toute circonstance" icon="rocket">
+		Revenez sur cette page d'accueil pour accéder à toutes les ressources du
+		cours, même après l'avoir terminé.
 	</Card>
 </CardGrid>

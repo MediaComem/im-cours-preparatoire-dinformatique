@@ -1,15 +1,14 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import starlightLinksValidator from "starlight-links-validator";
-import starlightVideos from "starlight-videos";
+// TODO: Uncomment this line when the plugin is fixed to work with Astro v7 - https://github.com/HiDeoo/starlight-links-validator/issues/165
+// import starlightLinksValidator from "starlight-links-validator";
 
 const title =
-	"Cours préparatoire d'informatique pour ingénierie des médias à la HEIG-VD";
-const description =
-	"Cours préparatoire d'informatique pour ingénierie des médias à la HEIG-VD.";
+	"Unité préparatoire d'informatique pour ingénierie des médias à la HEIG-VD";
+const description = `${title}.`;
 const protocol = "https";
-const site = "mediacomem.github.io";
-const base = "/im-cours-preparatoire-dinformatique";
+const site = "heig-vd-upinfo-course.github.io";
+const base = "/heig-vd-upinfo-course";
 const ogUrl = new URL(`${base}/og.webp?v=1`, `${protocol}://${site}`).href;
 const ogImageAlt = `${title} - ${description}`;
 
@@ -29,7 +28,7 @@ export default defineConfig({
 				{
 					icon: "github",
 					label: "GitHub",
-					href: "https://github.com/MediaComem/im-cours-preparatoire-dinformatique",
+					href: "https://github.com/heig-vd-upinfo-course/heig-vd-upinfo-course",
 				},
 			],
 			head: [
@@ -61,7 +60,7 @@ export default defineConfig({
 			credits: true,
 			editLink: {
 				baseUrl:
-					"https://github.com/MediaComem/im-cours-preparatoire-dinformatique/edit/main/",
+					"https://github.com/heig-vd-upinfo-course/heig-vd-upinfo-course/edit/main/",
 			},
 			lastUpdated: true,
 			tableOfContents: {
@@ -70,9 +69,8 @@ export default defineConfig({
 			},
 			plugins: [
 				// https://starlight-links-validator.vercel.app/
-				starlightLinksValidator(),
-				// https://starlight-videos.netlify.app/
-				starlightVideos(),
+				// TODO: Uncomment this line when the plugin is fixed to work with Astro v7 - https://github.com/HiDeoo/starlight-links-validator/issues/165
+				// starlightLinksValidator(),
 			],
 			sidebar: [
 				{

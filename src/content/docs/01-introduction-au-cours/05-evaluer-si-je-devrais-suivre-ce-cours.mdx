@@ -2,8 +2,9 @@
 title: Évaluer si je devrais suivre ce cours
 ---
 
+import { Aside } from "@astrojs/starlight/components";
 import FeedbackComponent from "@components/FeedbackComponent.astro";
-import { List } from "starlight-videos/components";
+import CheckList from "@components/CheckList.astro";
 
 La liste suivante est un auto-diagnostic pour vous aider à évaluer si ce cours
 est adapté à votre niveau de connaissances et d'expérience avec les ordinateurs.
@@ -17,7 +18,9 @@ cours est justement de vous aider à acquérir les compétences nécessaires pou
 réussir dans votre parcours en ingénierie des médias, quel que soit votre niveau
 de départ.
 
-<List title="Évaluer si je devrais suivre ce cours">
+<Aside type="tip" title="Évaluer si je devrais suivre ce cours" icon="list-format">
+
+<CheckList>
 
 - [ ] Je sais lister les composants d'un ordinateur et leurs interactions.
 - [ ] Je suis capable de décrire ce qu'il se passe lorsque je démarre mon
@@ -55,7 +58,9 @@ de départ.
 - [ ] Je suis capable de décrire ce qu'il se passe lorsque je me connecte à un
       réseau sans fil (Wi-Fi).
 
-</List>
+</CheckList>
+
+</Aside>
 
 Si vous avez coché la plupart des cases, vous avez probablement déjà une bonne
 maîtrise des compétences informatiques de base et vous pourriez ne pas avoir
