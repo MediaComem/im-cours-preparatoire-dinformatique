@@ -8,6 +8,8 @@ const description = `${title}.`;
 const protocol = "https";
 const site = "heig-vd-upinfo-course.github.io";
 const base = "/heig-vd-upinfo-course";
+
+// https://myogimage.com/
 const ogUrl = new URL(`${base}/og.webp?v=1`, `${protocol}://${site}`).href;
 const ogImageAlt = `${title} - ${description}`;
 

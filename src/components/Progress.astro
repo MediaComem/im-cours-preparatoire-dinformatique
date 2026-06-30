@@ -1,21 +1,31 @@
 ---
 import { Aside, Icon } from "@astrojs/starlight/components";
+
+export interface Props {
+	enabled?: boolean;
+}
+
+const { enabled = true } = Astro.props;
 ---
 
-<Aside type="note" icon="rocket" title="J'ai terminé ce contenu !">
-	<label class="progress-label" for="page-progress-checkbox">
-		<input
-			id="page-progress-checkbox"
-			type="checkbox"
-			data-umami-event="progress"
-			data-umami-event-value="toggle"
-		/>
-		<span>
-			Félicitations ! Cochez cette case pour suivre votre progression dans le
-			menu latéral.
-		</span>
-	</label>
-</Aside>
+{
+	enabled && (
+		<Aside type="note" icon="rocket" title="J'ai terminé ce contenu !">
+			<label class="progress-label" for="page-progress-checkbox">
+				<input
+					id="page-progress-checkbox"
+					type="checkbox"
+					data-umami-event="progress"
+					data-umami-event-value="toggle"
+				/>
+				<span>
+					Félicitations ! Cochez cette case pour suivre votre progression dans
+					le menu latéral.
+				</span>
+			</label>
+		</Aside>
+	)
+}
 
 <template id="progress-marker-template">
 	<span class="progress-marker" aria-hidden="true">
